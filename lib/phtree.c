@@ -15,7 +15,6 @@
  * find-min: simply return the top element of the heap.
  * meld: compare the two root elements, the smaller remains the root of the result, the larger element and its subtree is appended as a child of this root.
  * insert: create a new heap for the inserted element and meld into the original heap.
- * decrease-key (optional): remove the subtree rooted at the key to be decreased, replace the key with a smaller key, then meld the result back into the heap.
  * delete-min: remove the root and do repeated melds of its subtrees until one tree remains. Various merging strategies are employed.
  */
 
@@ -371,4 +370,5 @@ struct ph_node *ph_first_postorder(const struct ph_root *root)
 
 	return ph_left_deepest_node(root->ph_node);
 }
+
 EXPORT_SYMBOL(ph_first_postorder);
